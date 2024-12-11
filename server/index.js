@@ -18,14 +18,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { fileURLToPath } from 'url';
 const app = express();
-const PORT=press.env.PORT;
+const PORT=process.env.PORT;
 const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
 app.get('/',(req,res)=>{
   res.send("Hello Everyone my name is aditya!!");  
 })
 app.get('/signup',(req,res)=>{
-    res.sendFile(path.join(__dirname,"views","SignUp.html"))
+    res.sendFile(path.join(__dirname,"/views","SignUp.html"))
 })
 // app.get('/aditya',(req,res)=>{
 //     res.json({"helo this is aditya"})
